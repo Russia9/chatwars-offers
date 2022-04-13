@@ -6,7 +6,7 @@ steps:
   - name: build
     image: plugins/docker
     settings:
-      registry: registry.gitlab.com
+      registry: cr.selcloud.ru
       username:
         from_secret: docker_username
       password:
