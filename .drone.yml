@@ -11,12 +11,12 @@ steps:
         from_secret: docker_username
       password:
         from_secret: docker_password
-      repo: cr.selcloud.ru/russia9/${DRONE_REPO}/${DRONE_COMMIT_BRANCH}
+      repo: cr.selcloud.ru/russia9/${DRONE_REPO_NAME}/${DRONE_COMMIT_BRANCH}
       tags:
         - latest
         - ${DRONE_COMMIT_SHA}
       cache_from:
-        - cr.selcloud.ru/russia9/${DRONE_REPO}/${DRONE_COMMIT_BRANCH}:latest
+        - cr.selcloud.ru/russia9/${DRONE_REPO_NAME}/${DRONE_COMMIT_BRANCH}:latest
 
 #  - name: deploy
 #    image: appleboy/drone-ssh
